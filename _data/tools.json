@@ -79,7 +79,7 @@
     "story-title": "Grano advanced queries and linked data",
     "story-link": "http://pudo.org/blog/2014/09/01/grano-linked-data.html",
     "summary": "Tool for mapping networks of political and economic influence.",
-    "description": "Grano is an open source toolkit consisting of a series of tools to help extract and analyze data to help journalists and researchers who want to investigate the connections that exist between public and private officials. It helps understand the most relevant relationships in these networks and to merge data from different sources.\n\nGrano has been used to power a variety of other tools, including:\n\nSiyazana: a database linking political and economic influencers in South Africa.\nOpenInterests.eu, a catalog of political and business influencers related to the European Union.\nFor more: http://bit.ly/1TZNyJX",
+    "description": "<p>Grano is an open source toolkit consisting of a series of tools to help extract and analyze data to help journalists and researchers who want to investigate the connections that exist between public and private officials. It helps understand the most relevant relationships in these networks and to merge data from different sources.</p><p>Grano has been used to power a variety of other tools, including:<ul><li>Siyazana: a database linking political and economic influencers in South Africa.</li><li>OpenInterests.eu, a catalog of political and business influencers related to the European Union.</li></ul></p>For more: http://bit.ly/1TZNyJX",
     "image-url": "https://d3atbsy0flqavg.cloudfront.net/v1.23.0/site/uri/icfjknight-ire2016.silk.co/file/id/a7a8ac8e-8c5f-4624-ace5-ed8a29d88009/",
     "date-added": "8/15/2016 13:38"
   }

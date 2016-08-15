@@ -88,10 +88,10 @@ title: ICFJ Impact
 	{% endif %}
 	<div class="panel panel-default container-fluid col-md-6" >
 	<div class="col-md-4">
-			<a href="{{ tool.title | datapage_url: 'tools' }}" target="_blank"><img class="img-responsive" src="{{ tool.image-url }}"/></a>
+			<a href="{{ tool.title | datapage_url: 'tools' }}"><img class="img-responsive" src="{{ tool.image-url }}"/></a>
 		</div>
 		<div class="col-md-8">
-			<h3><a href="{{ tool.title | datapage_url: 'tools' }}" target="_blank">{{ tool.title }}</a></h3>
+			<h3><a href="{{ tool.title | datapage_url: 'tools' }}" >{{ tool.title }}</a></h3>
 			<p>{{ tool.summary }}</p>
 			<p>Developed by {{ tool.developed-by }}</p>
 		</div>

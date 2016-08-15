@@ -68,5 +68,19 @@
     "description": "From computer protection to internal and external communications, the \"Digital Security Toolkit for Journalists and Bloggers\" can be used as a resource for reporters and editors looking to protect themselves from security threats. The guide includes information on storing sensitive materials, antivirus software, anonymous internet browsing as well as encrypted mobile and video communications.",
     "image-url": "https://d3atbsy0flqavg.cloudfront.net/v1.23.0/site/uri/icfjknight-ire2016.silk.co/file/id/9c7338cf-dbac-4adc-9f42-bfdc5853a3bf/",
     "date-added": "8/12/2016 16:11"
+  },
+  {
+    "row": 7,
+    "title": "Grano",
+    "link": "http://granoproject.org/",
+    "fellows": "Friedrich Lindenberg",
+    "managing-director": "",
+    "developed-by": "Code for Africa",
+    "story-title": "Grano advanced queries and linked data",
+    "story-link": "http://pudo.org/blog/2014/09/01/grano-linked-data.html",
+    "summary": "Tool for mapping networks of political and economic influence.",
+    "description": "Grano is an open source toolkit consisting of a series of tools to help extract and analyze data to help journalists and researchers who want to investigate the connections that exist between public and private officials. It helps understand the most relevant relationships in these networks and to merge data from different sources.\n\nGrano has been used to power a variety of other tools, including:\n\nSiyazana: a database linking political and economic influencers in South Africa.\nOpenInterests.eu, a catalog of political and business influencers related to the European Union.\nFor more: http://bit.ly/1TZNyJX",
+    "image-url": "https://d3atbsy0flqavg.cloudfront.net/v1.23.0/site/uri/icfjknight-ire2016.silk.co/file/id/a7a8ac8e-8c5f-4624-ace5-ed8a29d88009/",
+    "date-added": "8/15/2016 13:38"
   }
 ]

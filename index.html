@@ -81,12 +81,12 @@ title: ICFJ Impact
 
 
 	{% for tool in site.data.tools %}
-	{% assign loopindex = forloop.index | modulo: 2 %}
+	{% assign loopindex = forloop.index | modulo: 3 %}
 
 	{% if loopindex == 1 %}
 		<div class="row">
 	{% endif %}
-	<div class="panel panel-default container-fluid col-md-6" >
+	<div class="panel panel-default container-fluid col-md-4" >
 	<div class="col-md-4">
 			<a href="{{ tool.title | datapage_url: 'tools' }}"><img class="img-responsive" src="{{ tool.image-url }}"/></a>
 		</div>
@@ -101,16 +101,18 @@ title: ICFJ Impact
 		</div>
 	{% endif %}
 	{% endfor %}
-	{% if loopindex == 1 %}
+	{% if loopindex > 0 %}
 		</div>
 	{% endif %}
 
 	<hr>
 		
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-	</div> <!-- /container -->
+    <footer>
+		<div class="col-md-2">
+			<a href="http://www.icfj.org" target="_blank"><img class="img-responsive" src="img/fullcolor_horizontal_logo_large.jpg"/></a>
+		</div>
+	</footer>
+	
 
 
     <!-- Bootstrap core JavaScript

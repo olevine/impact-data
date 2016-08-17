@@ -30,7 +30,7 @@ theme: minima
 
 # data page creation settings
 page_gen:
-  - data: 'tools'
+  - data: 'toolsdata'
     template: 'toolpage'
     name: 'title'
     dir: 'tools'

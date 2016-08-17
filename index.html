@@ -11,7 +11,7 @@ title: ICFJ Impact
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
 
     <title>{{ page.title }}</title>
 
@@ -80,20 +80,27 @@ title: ICFJ Impact
 	-->
 
 
-	{% for tool in site.data.tools %}
+	{% for tool in site.data.toolsdata %}
 	{% assign loopindex = forloop.index | modulo: 3 %}
 
 	{% if loopindex == 1 %}
 		<div class="row">
 	{% endif %}
 	<div class="panel panel-default container-fluid col-md-4" >
-	<div class="col-md-4">
-			<a href="{{ tool.title | datapage_url: 'tools' }}"><img class="img-responsive" src="{{ tool.image-url }}"/></a>
+		<div class="col-md-4">
+			<a href="{{ tool.title | datapage_url: 'tools' }}"><img class="img-responsive" src="{{ tool.image-link }}"/></a>
 		</div>
 		<div class="col-md-8">
 			<h3><a href="{{ tool.title | datapage_url: 'tools' }}" >{{ tool.title }}</a></h3>
 			<p>{{ tool.summary }}</p>
-			<p>Developed by {{ tool.developed-by }}</p>
+			<p>Developers</p><ul>
+			{% assign devs = tool.developers | split: "," %}
+			{% assign devlinks = tool.developer-links | split: "," %}
+			{% for dev in devs %}
+				{% assign devindex = forloop.index0 %}
+			<li><a href="{{ devlinks[devindex]  }}">{{ dev }}</a></li>
+			{% endfor %}
+			</ul></p>
 		</div>
 
 		</div>

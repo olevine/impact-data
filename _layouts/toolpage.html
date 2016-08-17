@@ -7,11 +7,57 @@
 		<a href="{{ page.link }}" target="_blank"><img class="img-responsive" src="{{ page.image-link }}"/></a>
 	</div>
 	<div class="col-md-9">
-		<h3><a href="{{ page.link }}" target="_blank">{{ page.title }}</a></h3>
-		<p>{{ page.summary }}</p>
-<!--		<p>Developed by {{ page.developed-by }}</p>  -->
-		<p>{{ page.description }}</p>
-<!--			<a class="btn btn-primary" id="btn{{ tool.row }}" data-toggle="collapse" href="collapse{{ tool.row }}">More info</a> -->
+		<div class="row">
+			<h3><a href="{{ page.link }}" target="_blank">{{ page.title }}</a></h3>
+			<p>{{ page.summary }}</p>
+		</div>
+
+		<div class="row">
+			<table class="table">
+				<tr><td>Developers</td>
+				<td>
+			{% assign devs = page.developers | split: "," %}
+			{% assign devlinks = page.developer-links | split: "," %}
+			{% for dev in devs %}
+				{% assign devindex = forloop.index0 %}
+			<a href="{{ devlinks[devindex]  }}">{{ dev }}</a><br/>
+			{% endfor %}
+				</td></tr>
+				<tr><td>Fellows</td>
+				<td>
+			{% assign fels = page.fellows | split: "," %}
+			{% assign fellinks = page.fellow-bios | split: "," %}
+			{% for fel in fels %}
+				{% assign felindex = forloop.index0 %}
+			<a href="{{ fellinks[felindex]  }}">{{ fel }}</a><br/>
+			{% endfor %}
+				</td></tr>
+				<tr><td>Stories</td>
+				<td>
+			{% assign sts = page.stories | split: "," %}
+			{% assign slinks = page.story-links | split: "," %}
+			{% for s in sts %}
+				{% assign sindex = forloop.index0 %}
+			<a href="{{ slinks[sindex]  }}">{{ s }}</a><br/>
+			{% endfor %}
+				</td></tr>
+			{% if page.github %}
+				<tr><td>Github</td>
+				<td>
+				<a href="{{ page.github }}">{{ page.github}}</a>
+				</td></tr>
+			{% endif %}
+				<tr><td>Cost</td>
+				<td>
+				{{ page.cost }}
+				</td></tr>
+			</table>
+		
+		</div>
+	
+		<div class="row">
+			<div>{{ page.description }}</div>
+		</div>
 	</div>
 </div>
 <hr>

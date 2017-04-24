@@ -78,6 +78,25 @@ title: ICFJ Impact
       </div>
 	-->
 
+	<div class="panel panel-default">
+	{% assign uniques = "" %}
+	{% assign all_fellows = site.data.toolsdata | map: "fellows" %}
+	{% for fel in all_fellows %}
+		{% assign uniques = uniques | append: "," %}
+		{% assign uniques = uniques | append: fel | strip %}
+	{% endfor %}
+	{% assign my_array = uniques | split: "," %}
+	{% assign ufel = my_array | uniq  %}
+	<select id="select-fellow">
+		{% for name in ufel %}
+	
+		<option value="{{ name }}">{{ name }}</option>
+		
+		{% endfor %}
+		
+	</select>
+	<h3 id="selected-one" >selected: </h3>
+	</div>
 
 	{% for tool in site.data.toolsdata %}
 	{% assign loopindex = forloop.index | modulo: 3 %}
@@ -91,8 +110,12 @@ title: ICFJ Impact
 		</div>
 		<div class="col-md-8">
 			<h3><a href="{{ tool.title | datapage_url: 'tools' }}" >{{ tool.title }}</a></h3>
+			<button class="tool-button">Push!</button>
 			<p>{{ tool.summary }}</p>
-			<p><i>{{ tool.fellows }}</i></p>
+			{% assign projfel = tool.fellows | split: "," %}
+			{% for pf in projfel %}
+			<p id="{{ pf }}"><i>{{ pf }}</i></p>
+			{% endfor %}
 		</div>
 
 		</div>
@@ -112,12 +135,29 @@ title: ICFJ Impact
 		</div>
 	</footer>
 	
+	<script>
+	
+	$(".tool-button").on("click", function{} {
+		$("#selected-one").html("Pushed");
+	});
+	
+	$("#selected-one").html("testing script");
+	
+	$( "#select-fellow" ).change(function() {
+		var str;
+		$( "select option:selected" ).each(function() {
+			str += $( this ).text() + " ";
+		});
+		$("#selected-one").html(str);
+	});
+	
+	</script>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
